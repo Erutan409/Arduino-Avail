@@ -8,7 +8,7 @@ Method for comparing two milliseconds to each other for asserting `true`/`false`
 unsigned long lastTimestamp = 123455; // in milliseconds
 unsigned long margin = 150; // milliseconds before needing to do something
 
-if (avail(&margin, &lastTimestamp)) {
+if (Avail::millis(&margin, &lastTimestamp)) {
     // do stuff after waiting the length of 'margin'
 } else {
     // continue looping through code
@@ -22,7 +22,7 @@ unsigned long lastTimestamp = 123455; // in milliseconds
 unsigned long margin = 150; // milliseconds before needing to do something
 bool rollover; // this will be assigned the approrpiate flag when being passed by reference
 
-if (avail(&margin, &lastTimestamp, rollover)) {
+if (Avail::millis(&margin, &lastTimestamp, rollover)) {
     // do stuff after waiting the length of 'margin'
 } else {
     // continue looping through code
